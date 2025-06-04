@@ -1,0 +1,33 @@
+.puzzle{
+      background-color: #282c34;
+}
+body{
+    background-color: #282c34;
+}
+
+.puzzle-Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.Title{
+   color:white;
+   position: relative;
+   justify-content: center;
+   top:70px;
+   left:580px;
+}
+.grid-container{
+border: 4px solid #61dafb;
+width: 300px;
+height: 300px;
+position: relative;
+left:480px;
+top: 100px;
+display: grid;
+
+}
