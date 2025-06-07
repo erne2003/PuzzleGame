@@ -1,22 +1,25 @@
 import React from "react";
 import "./Puzzle.css"; // adjust path as needed
+import { useState } from "react";
+
 
 function Puzzle() {
+  const [image, setImage] = useState(null);
+
+  function handleUpload(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    setImage(URL.createObjectURL(file));
+  }
   return (
     <div className="puzzle">
-        <h1 className="Title">Puzzle</h1>
-      
-    <div className="grid-container">
-  <section className="sect1">Section 1</section>
-  <section className="sect2">Section 2</section>
-  <section className="sect3">Section 3</section>
-  <section className="sect4">Section 4</section>
-  <section className="sect1">Section 5</section>
-  <section className="sect2">Section 6</section>
-  <section className="sect3">Section 7</section>
-  <section className="sect4">Section 8</section>
-  <section className="sect4">Section 9</section>
-</div>
+  
+    <div className="puzzle-container">
+<input className="Input-Button" type="file" accept="image/*" onChange={handleUpload}/>
+      {image && <img src ={image} alt="Uploaded" className="uploaded-image" style={{maxWidth:'100%'}} />}
+
+    </div>
+     
     </div>
 
   );

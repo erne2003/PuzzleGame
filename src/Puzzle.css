@@ -1,5 +1,7 @@
 .puzzle{
       background-color: #282c34;
+      width: 200px;
+      height: 100vh;
 }
 body{
     background-color: #282c34;
@@ -30,4 +32,16 @@ left:480px;
 top: 100px;
 display: grid;
 
+}
+.image-container{
+     width: var(--tileW);
+  height: var(--tileH);
+  
+  background-size: calc(var(--tileW) * 3) calc(var(--tileH) * 3);
+  background-position: 0 0;
+}
+.puzzle-container{
+    position: relative;
+    top: 400px;
+    left: 540px;
 }
