@@ -104,3 +104,13 @@ body {
   background-color: #52c0e8;
   
 }
+.ButtonContainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-direction: row;
+}
+.SolvePuzzle:hover {
+ cursor: pointer;
+background-color: #52c0e8;
+}
